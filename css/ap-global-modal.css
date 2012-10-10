@@ -1,0 +1,104 @@
+/* --- AP Teacher Community Custom Portlet CSS ---
+   ================================================== */
+/* *
+ * Authors: APTC UI Dev Team: Rohit Rao - Julia Beach
+ * Project URL: https://apcommunity.collegeboard.org
+ * Version: 1
+ * Date: 01 January 2012
+    ================================================== */
+ /* --- DESCRIPTION ** READ THIS ** 
+    ================================================== */
+/* *
+  * There is an existing implementation of a modal dialog
+  * on the APTC website.  It uses a 3rd party plugin called
+  * jQuery Tools.  The tools modal is very buggy and heavy.
+  * This modal is a lightweight, custom implementation 
+  * of a modal dialog to be used for all new modal instances
+  * as we phase out the jQuery Tools modal
+   ================================================== */
+/* --- TABLE OF CONTENTS ---
+   ================================================== */
+/*  AP CUSTOM MODAL DIALOG - GLOBAL STYLES
+/*  AP MODAL - STYLES FOR INDIVIDUAL INSTANCES OF MODAL
+/* ==================================================
+   ================================================== */
+/* --- AP CUSTOM MODAL DIALOG - GLOBAL STYLES ---
+   ==================================================
+   ================================================== */
+   
+ #ap-modal-mask {
+   position:absolute;
+   left:0;
+   top:0;
+   z-index:1000;
+   background-color:#000;
+   opacity: 0.8;
+   display:none;
+ }
+ .ap-window{
+   position:absolute;
+   left:0;
+   top:0;
+   width:440px;
+   height:200px;
+   display:none;
+   z-index:9999;
+   padding:20px;
+   background-image: url(../images/spacer.png);
+ }
+ .modal-close-x-button {
+     background: url('../images/new-close-control.png') no-repeat;
+     cursor: pointer;
+     height: 19px;
+     position: absolute;
+     right: 5px;
+     top: 5px;
+     width: 19px;
+}
+
+.clicked-row-content {
+	margin: 0 0 20px 0;
+}
+/*	==================================================
+	================================================== */
+/* --- AP MODAL - STYLES FOR STANDARD TYPES OF MODALS ---
+	==================================================
+	================================================== */
+.aptc-theme-modal {
+	background-color: #fff;
+}
+
+.aptc-theme-modal header {
+	margin: 0 0 20px 0;
+}
+
+.aptc-theme-modal .button-row {
+	margin: 20px 0 8px 0;
+	text-align: center;
+}
+.aptc-theme-modal .button-row:last-child {
+	margin-bottom: 0;
+}
+
+.aptc-theme-modal .button-row .aptc-theme-button {
+	margin: 0 8px;
+}
+
+ /* ==================================================
+    ================================================== */
+ /* --- AP MODAL - STYLES FOR INDIVIDUAL INSTANCES OF MODAL ---
+    ==================================================
+    ================================================== */
+
+#modaltutorial1 {
+  width:800px; 
+  height:600px;
+  padding:25px;
+  background-color:#fff;
+}
+
+#modal-approve-reject {
+	width: 722px;
+	height: auto;
+}
+

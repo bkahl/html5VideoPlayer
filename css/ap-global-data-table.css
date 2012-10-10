@@ -1,0 +1,221 @@
+/*** data table ***/
+.data-table
+{
+	table-layout:fixed;
+}
+.data-table-header
+{
+}
+.data-table-body
+{
+}
+.data-table-row
+{
+}
+.data-table-header-row
+{
+}
+.data-table-alternate-row
+{
+}
+.data-table-cell
+{
+	background-color:#f8f8f8;
+	border-bottom:1px dotted #ccc;
+	overflow:hidden;
+}
+.data-table-header-row .data-table-cell
+{
+	background-color:#c5e5fa;
+	border-bottom:none;
+}
+.data-table-alternate-row .data-table-cell
+{
+	background-color:#fff;
+}
+/*** /data table ***/
+
+/*** data item display style ***/
+.data-item-display-style
+{
+}
+.data-item-display-style.single-line .data-item-text
+{
+	white-space:nowrap;
+}
+.data-item-display-style.multi-line .data-item-text
+{
+}
+/*** /data item display style ***/
+
+/*** data item ***/
+.data-item
+{
+	padding:10px 0px 10px 10px;
+}
+.last-item .data-item
+{
+	padding-right:10px;
+}
+.header-data-item
+{
+}
+.empty-data-item
+{
+}
+/*** /data item ***/
+
+/*** data item text ***/
+.data-item-text
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	text-decoration:none;
+}
+.data-item-text.smaller, .data-item-text-style.smaller .data-item-text
+{
+	font-size:11px;
+}
+.data-item-text.small, .data-item-text-style.small .data-item-text
+{
+	font-size:12px;
+}
+.data-item-text.standard, .data-item-text-style.standard .data-item-text
+{
+	font-size:13px;
+}
+.data-item-text.large, .data-item-text-style.large .data-item-text
+{
+	font-size:15px;
+}
+.data-item-text.larger, .data-item-text-style.larger .data-item-text
+{
+	font-size:17px;
+}
+.data-item-text.lighter, .data-item-text-style.lighter .data-item-text
+{
+	color:#ccc;
+}
+.data-item-text.light, .data-item-text-style.light .data-item-text
+{
+	color:#999;
+}
+.data-item-text.medium, .data-item-text-style.medium .data-item-text
+{
+	color:#666;
+}
+.data-item-text.dark, .data-item-text-style.dark .data-item-text
+{
+	color:#333;
+}
+.data-item-text.darker, .data-item-text-style.darker .data-item-text
+{
+	color:#000;
+}
+.data-item-text.weak, .data-item-text-style.weak .data-item-text
+{
+	font-weight:lighter;
+}
+.data-item-text.standard, .data-item-text-style.standard .data-item-text
+{
+	font-weight:normal;
+}
+.data-item-text.strong, .data-item-text-style.strong .data-item-text
+{
+	font-weight:bold;
+}
+.data-item-stronger, .data-item-text-style.stronger .data-item-text
+{
+	font-weight:bolder;
+}
+.data-item-header-text
+{
+	font-weight:bold;
+}
+.data-item-strong-text
+{
+	font-weight:bold;
+}
+/*** /data item text ***/
+
+/*** data item link ***/
+.data-item-link
+{
+}
+.data-item-link.data-item-text.dark
+{
+	color:#333;
+}
+/*** /data item link ***/
+
+/*** data item thumbnail ***/
+.data-item-thumbnail
+{
+	/* border:1px solid #ccc; */
+}
+.data-item-thumbnail.smaller
+{
+	max-height:20px;
+	max-width:20px;
+}
+.data-item-thumbnail.small
+{
+	max-height:35px;
+	max-width:35px;
+}
+.data-item-thumbnail.normal
+{
+	max-height:50px;
+	max-width:50px;
+	/* width:50px; */
+}
+.data-item-thumbnail.large
+{
+	max-height:65px;
+	max-width:65px;
+}
+.data-item-thumbnail.larger
+{
+	max-height:80px;
+	max-width:80px;
+}
+/*** /data item thumbnail ***/
+
+.icon-approve {
+	background: url('../images/icon-yes.png') left center no-repeat;
+	display: inline-block;
+	padding: 0 5px 0 18px;
+	line-height: 20px;
+}
+
+.icon-reject {
+	background: url('../images/icon-no.png') left center no-repeat;
+	display: inline-block;
+	padding: 0 0 0 18px;
+	line-height: 20px;
+}
+/*	==================================================
+	================================================== */
+/*	--- STYLES FOR INDIVIDUAL INSTANCES OF DATA TABLE ---
+	==================================================
+	================================================== */
+#community-requests-pending .data-table-row, 
+#community-requests-rejected .data-table-row {
+	vertical-align: top;
+}
+
+#community-requests-pending .data-date {
+	width: 11%;
+}
+
+#community-requests-pending .data-comments {}
+
+#community-requests-pending .data-action {
+	width: 25%;
+}
+
+#community-requests-rejected .data-date1, 
+#community-requests-rejected .data-date2 {
+	width: 11%;
+}
+

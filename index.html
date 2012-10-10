@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  	<title>Open Modal</title>
+  	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8">
+  	<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ap-global-modal.css">
+    <link rel="stylesheet" href="css/ap-global-baseline.css">
+    <link rel="stylesheet" href="css/ap-global-data-table.css">
+    <link href="css/video-js.css" rel="stylesheet" type="text/css">
+
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <script type="text/javascript" src="js/video.js"></script>
+    
+    <style>
+      body {
+          width: 800px;
+      }
+
+      div.video-js {
+          margin-bottom: 100px;
+      }
+
+      .pageAlert {
+          background-color: #CCC;
+          padding: 5px;
+          border-radius: 5px;
+          border: 2px solid #666;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="container">
+
+	    <div class="aptc-theme-button button1">Hey1</div>
+	    <div class="video" style="display:none;">
+          <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="710" height="399"
+      poster="http://secure-media.collegeboard.org/CollegePlanning/media/image/Student_MH015_Photo_710w.jpg"
+      data-setup="{}">
+            <source src="videos/APTCFull-Bio_FIN_20120503.mp4" type='video/mp4' />
+          </video>
+      </div>
+
+		<br/>
+		<br/>
+	
+		<div id="community-requests-portlet">
+			
+			<div class="data-item actions">
+				<a class="icon-approve" action-id="581357" id="aui_3_2_0_130146">Approve</a> 
+				<a class="icon-reject" action-id="581357">Reject</a>
+			</div>
+			
+			<div class="data-item actions">
+				<a class="icon-approve" action-id="581232">Approve</a> 
+				<a class="icon-reject" action-id="581232" id="aui_3_2_0_133619">Reject</a>
+			</div>
+			
+	  </div>
+
+    <div id="ap-modal-mask">
+      <img src="images/spacer.png">
+    </div>
+
+    <div id="approveReject">
+      <div class="ap-window aptc-theme-modal" id="modal-approve-reject"> 
+        <form id="requestForm" method="POST" action="${actionURL}"> 
+          <a class="close modal-close-x-button"></a> 
+          <header class="h2">
+            <span class="header-word-approve-reject">Approve/Reject</span>the Request';
+          </header> 
+          <div id="values"></div>
+          <div class="portlet-msg-box"></div> 
+          <div class="settings-row-wrapper"> 
+            <div class="settings-row-label">Comments:</div> 
+            <div class="settings-row-value"> 
+              <textarea id="comments" name="comments" class="comments-textarea" rows="3" cols="70"></textarea> 
+            </div> 
+          </div>
+          <div class="button-row"> 
+            <input type="submit" class="submit-approve-reject aptc-theme-button" value="Approve/Reject"> 
+            <input type="button" class="close aptc-theme-button" value="Cancel"> 
+          </div> 
+          <input id="requestId" name="requestId" class="hidden-request-id" type="hidden" value="0"> 
+          <input name="action" class="hidden-action" type="hidden" value=""> 
+        </form> 
+      </div>
+    </div>
+	
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.openModal.js"></script>
+    <script type="text/javascript" src="js/jquery.center.js"></script>
+  	<script type="text/javascript">
+  	$().ready(function() {
+         
+         $(".button1").openModal({
+            type: "video",
+            id: "video1"
+         });
+         
+		    $("#community-requests-portlet .actions a").openModal({});
+
+  	});
+
+  	</script>
+  	
+
+  </body>
+
+</html>

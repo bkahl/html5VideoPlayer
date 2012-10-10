@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CB Video Player Test Page</title>
+
+  <link href="css/video-js.css" rel="stylesheet" type="text/css">
+
+  <!-- video.js must be in the <head> for older IEs to work. -->
+  <script src="js/video.js"></script>
+
+  <style>
+    body {
+        width: 800px;
+    }
+
+    div.video-js {
+        margin-bottom: 100px;
+    }
+
+    .pageAlert {
+        background-color: #CCC;
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid #666;
+    }
+  </style>
+
+</head>
+<body>
+  <p class="pageAlert">
+      Attention developers! For more details regarding the this version of the video player, please
+      view <a href="README_CB.html">this page</a>.
+  </p>
+
+  <h2>Video with no captions</h2>
+  <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="710" height="399"
+      poster="https://secure-media.collegeboard.org/CollegePlanning/media/image/Student_MH015_Photo_710w.jpg"
+      data-setup="{}">
+    <source src="https://secure-media.collegeboard.org/CollegePlanning/media/video/student/Student_MH015_Video.mp4" type='video/mp4' />
+    <source src="https://secure-media.collegeboard.org/CollegePlanning/media/video/student/Student_MH015_Video.theora.ogv" type='video/ogg' />
+    <source src="https://secure-media.collegeboard.org/CollegePlanning/media/video/student/Student_MH015_Video.webm" type='video/webm' />
+  </video>
+
+  <h2>Video with one set of captions</h2>
+  <video id="example_video_2" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
+      poster="http://video-js.zencoder.com/oceans-clip.png"
+      data-setup="{}">
+    <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+    <track kind="captions" src="sample.vtt" srclang="en" label="English"></track>
+  </video>
+
+  <h2>Video with three sets of captions</h2>
+  <video id="example_video_3" class="video-js vjs-default-skin" controls preload="none" width="710" height="399"
+      poster="https://secure-media.collegeboard.org/CollegePlanning/media/image/Student_ND614566271_Photo_710w.jpg"
+      data-setup="{}">
+    <source src="https://secure-media.collegeboard.org/CollegePlanning/media/video/student/Student_ND614566271_Video.mp4" type='video/mp4' />
+    <source src="https://secure-media.collegeboard.org/CollegePlanning/media/video/student/Student_ND614566271_Video.theora.ogv" type='video/ogg' />
+    <source src="https://secure-media.collegeboard.org/CollegePlanning/media/video/student/Student_ND614566271_Video.webm" type='video/webm' />
+    <track kind="captions" src="sample.vtt" srclang="en" label="English"></track>
+    <track kind="captions" src="sample-de.vtt" srclang="de" label="German"></track>
+    <track kind="captions" src="sample-fr.vtt" srclang="fr" label="French"></track>
+  </video>
+</body>
+</html>

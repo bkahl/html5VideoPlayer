@@ -1,0 +1,2134 @@
+/* --- AP Teacher Community Global CSS ---
+   ================================================== */
+/* *
+ * Authors: APTC UI Dev Team: John Runion - Rob McIntosh - Julia Beach
+ * Project URL: https://apcommunity.collegeboard.org
+ * Version: 1
+ * Date: 30 September 2011
+   ================================================== */
+/* --- TABLE OF CONTENTS ---
+   ================================================== */
+/*  MAIN
+    DOCKBAR
+    HEADER
+    NAV
+    FOOTER
+    BUTTONS, LINKS
+    HEADINGS
+    MODULES
+        General
+        Navigation
+    ANNOUNCEMENTS
+    COMMENTS
+    RELATED RESOURCES (deprecated)
+    RELATED ITEMS
+    MISC
+    GLOBAL POSITION, WIDTH, PADDING AND MARGIN STYLES
+/* ==================================================
+   ================================================== */
+/* --- MAIN ---
+   ==================================================
+   ================================================== */
+html {
+    height: 100%
+}
+
+body {
+    background: #fff;
+    font-family: Arial;
+    font-size: 12px; /* should be 13px?! according to style guide... -jbeach */
+    color: #333; /* changed from #666 by jbeach for US2643 */
+    height: 100%;
+}
+
+p {
+    line-height: 17px; /* added by jrunion 10/11/11 */
+}
+
+a {
+	cursor: pointer; /* added by jbeach, 10/7/2011 */
+}
+
+input[type="text"], input[type="password"], input[type="file"], input[type="submit"], input[type="button"], input[type="reset"], select, textarea, .textarea, button { /* added by jvrunion 12/05/11*/
+	background-image: none;
+	background-repeat: no-repeat;
+	background-color: #f8f8f8;
+	border: 1px solid #CDCDCD;
+	border-color: #cdcdcd;
+	font: 1em Arial, Helvetica, Verdana, sans-serif;
+	padding: 5px 10px;
+}
+
+#wrapper {
+    background: #fff;
+    height: 100%;
+}
+
+#content {
+	margin: 0px auto;
+	padding: 30px 0;
+	width: 960px;
+}
+
+.ap-global-wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.ap-community-header {
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
+    width: 960px;
+}
+
+.ap-main-block {
+    display: block
+}
+
+.ap-community-footer {
+    background-color: #FFF;
+    border-top: 1px solid #e8e8e8;
+    color: #CCC;
+    display: block;
+    font-size: 12px;
+    height: 100px;
+    margin: 25px auto 0;
+    padding: 20px 0 0;
+}
+
+.ap-welcome-banner {
+    background: #fff
+}
+
+/* ==================================================
+   ================================================== */
+/* --- DOCKBAR ---
+   ==================================================
+   ================================================== */
+.chat-bar {
+	background: #fefefe url('../images/bg-gradient1.png');
+	background-repeat: repeat-x;
+	background: -moz-linear-gradient(100% 100% 90deg, #e2e2e2, #fefefe);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fefefe), to(#e2e2e2));
+	background: -webkit-linear-gradient(#fefefe, #e2e2e2);
+	background: -o-linear-gradient(#fefefe, #e2e2e2);
+    border: 1px solid #D7D7D7;
+    bottom: 0;
+    height: 24px;
+    left: 1px;
+    margin: 0 auto;
+    position: fixed;
+    right: 1px;
+    width: 960px;
+}
+
+.chat-bar div ul li .panel-trigger {
+    background: none repeat scroll 0 0 #5DC151;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    color: #FFF;
+    cursor: pointer;
+    float: left;
+    font: bold 12px/24px Arial,sans-serif;
+    padding: 0 6px;
+    text-decoration: none;
+}
+
+.chat-bar div ul li .panel-trigger:hover {
+    background: #448d3b
+}
+
+.chat-bar div ul li.selected .panel-trigger {
+    background: #448d3b
+}
+
+/* ===[ Chat Panel ]=== 
+	* This is for the docked chat panel at the bottom of every page, no comp was given for the interior 
+	* elements so basic styling was applied to match the APTC theme 
+   ================================================== */		
+.panel-window {
+    -moz-border-radius: 4px 4px 0;
+    background: none repeat scroll 0 0 #FFF;
+    border: 1px solid #D7D7D7;
+    font: 12px Arial;
+    position: relative;
+    width: 226px;
+}
+
+.panel-title {
+    background: none repeat scroll 0 0 #003263;
+    color: #fff;
+    font-weight: 400;
+    height: 24px;
+    line-height: 24px;
+}
+
+/* ===[ Dockbar Header Control ]=== */
+.dockbar {
+    display: block;
+    z-index: 99999;
+}
+
+/* ==================================================
+   ================================================== */
+/* --- HEADER ---
+   ==================================================
+   ================================================== */
+#banner {
+    height: auto;
+    margin: 0px auto;
+    width: 960px;
+}
+
+/* ===[ masthead container ]===  */
+.sectionMastHead{
+    font-size: 0; /*deals with whitespace inside container */
+    padding: 10px 0 60px;
+}
+    .nsi .sectionMastHead{ /* not signed in state */
+        padding-top:35px;
+    }
+
+/* ===[ masthead links ]===  */
+/* TODO: globalize link settings better and remove this */
+.sectionMastHead a{
+    color: #09f;
+    text-decoration: none;
+}
+    .sectionMastHead a:hover{
+        text-decoration: underline;
+    }
+
+/* ===[ utility nav ]=== */
+.navUtility{
+    /* see .navHorizPipes1 for base structure styles (ap-global-styleguide.css) */
+    margin: 0 0 5px;
+    text-align: right;
+}
+    .navUtility ul>li{
+        font-size: 15px;
+        line-height: 20px;
+    }
+        .navUtility ul>li.itemWelcome a{
+            font-weight: 700;
+        }
+        .navUtility ul>li.itemHelp{
+            padding-right: 0;
+        }
+            .navUtility ul>li.itemHelp a{
+                background: url('../images/question-mark-help.gif') no-repeat right top;
+                display: inline-block;
+                padding: 0 22px 0 0;
+            }
+
+/* ===[ logo section container ]===
+.sectionLogo{} */
+
+/* ===[ logo image ]=== */
+.itemLogo{
+    display: block;
+    float: left;
+}
+
+/* ===[ community name ]=== */
+.communityName{
+    color: #6bc461;
+    display: block;
+    float: left;
+    font: 27px/27px 'SerifaLight';
+    padding: 24px 10px 0;
+}
+    .mac .communityName{ /* for some reason this element renders differently on mac vs windows, regardless of browser */
+        padding-top: 28px;
+    }
+
+/* ===[ community chooser link ]=== */
+.communityChooser{
+    display: block;
+    float: left;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 33px 0 0;
+    position: relative;
+    width: 240px;
+}
+    /* interactive element - see main.js for styles set dynamically */
+    .communityChooser .menuContainer{
+        margin: 5px 0 0 -16px;
+        width: 100%;
+        z-index: 100;
+    }
+    .communityChooser .menuSlide{
+        display: none;
+    }
+
+/* ===[ nav header (green bar) ]=== */
+.navHeader{
+    clear: both;
+}
+.navHeader > ul{
+    background: #5bbf50; /*fallback for non-CSS3 browsers*/
+    background: -webkit-linear-gradient(#5bbf50, #3e8933); /*new webkit*/
+    background: -moz-linear-gradient(#5bbf50, #3e8933); /*gecko*/
+    background: -ms-linear-gradient(#5bbf50, #3e8933); /*IE10*/
+    background: -o-linear-gradient(#5bbf50, #3e8933); /*opera 11.10+*/
+    background: linear-gradient(#5bbf50, #3e8933); /*future CSS3 browsers*/
+    -pie-background: linear-gradient(#5bbf50, #3e8933); /*PIE*/
+    behavior: url('/aptc-theme/htc/PIE.htc');
+    border: none;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    color: #fff;
+    display: table;
+    font: 16px/28px 'Arial';
+    margin: 0 0 7px;
+    padding: 1px;
+    width: 100%;
+}
+    .navHeader > ul > li{
+        behavior: url('/aptc-theme/htc/PIE.htc');
+        display: table-cell;
+        margin: 0;
+        text-align: center;
+    }
+    /* order here matters, especially since we want a singleton 
+     * nav element to pickup the same rules as "first-child" */
+    .navHeader > ul > li:last-child{
+        text-align: right;
+    }
+    .navHeader > ul > li:first-child{
+        text-align: left;
+    }
+    /* just-for-PIE
+     * so PIE can inherit text-align properly on last-child */
+    .ie .navHeader > ul > li.last-child{
+        behavior: url('/aptc-theme/htc/PIE.htc');
+        text-align: right;
+    }
+    /* end just-for-PIE */
+
+        .navHeader > ul > li > a, 
+        .navHeader > ul > li .menuTriggerClone{
+            color: #fff;
+            display: inline-block;
+            padding: 0 25px;
+            text-decoration: none;
+            behavior: url('/aptc-theme/htc/PIE.htc');
+            -pie-watch-ancestors: 1;
+        }
+        /* just-for-PIE
+         * so PIE can inherit text-align properly on last-child */
+        .ie .navHeader > ul > li.last-child > a{
+            behavior: url('/aptc-theme/htc/PIE.htc');
+            -pie-watch-ancestors: 1;
+        }
+        /* end just-for-PIE */
+            .navHeader > ul > li:hover > a, 
+            .navHeader > ul > li.active > a, 
+            .navHeader > ul > li:hover .menuTriggerClone, 
+            .navHeader > ul > li.active .menuTriggerClone, 
+            .navHeader > ul > li .menuTriggerClone.active{
+                background: #fefefe; /*fallback for non-CSS3 browsers*/
+                background: -webkit-linear-gradient(#fefefe, #ddd); /*new webkit*/
+                background: -moz-linear-gradient(#fefefe, #ddd); /*gecko*/
+                background: -ms-linear-gradient(#fefefe, #ddd); /*IE10*/
+                background: -o-linear-gradient(#fefefe, #ddd); /*opera 11.10+*/
+                background: linear-gradient(#fefefe, #ddd); /*future CSS3 browsers*/
+                -pie-background: linear-gradient(#fefefe, #ddd); /*PIE*/
+                behavior: url('/aptc-theme/htc/PIE.htc');
+                border: none;
+                -moz-border-radius: 16px;
+                -webkit-border-radius: 16px;
+                border-radius: 16px;
+                color: #212121;
+            }
+            /* just-for-PIE
+             * so PIE can inherit text-align properly on last-child */
+            .ie .navHeader > ul > li.last-child:hover > a{
+                -pie-background: linear-gradient(#fefefe, #ddd); /*PIE*/
+                behavior: url('/aptc-theme/htc/PIE.htc');
+                border-radius: 16px;
+                -pie-watch-ancestors: 1;
+            }
+            /* end just-for-PIE */
+                .navHeader > ul > li .menuTriggerClone.active{
+                    behavior: url('/aptc-theme/htc/PIE.htc');
+                    -moz-border-radius: 16px 16px 0 0;
+                    -webkit-border-radius: 16px 16px 0 0;
+                    border-radius: 16px 16px 0 0;
+                    padding-bottom: 1px;
+                }
+    /* this is a special interactive element, 
+     * see main.js for styles set dynamically */
+    .navHeader .menuContainer{
+        text-align: left;
+        z-index: 6;
+    }
+    .navHeader .menuSlide{
+        display: none;
+    }
+
+
+/* ===[ Sub Nav area ]=== 
+    * includes buttons and search box below header 
+    * there are also jqTransform styles at work here 
+    * for the search box in the jquery-plugins.css file.
+   ================================================== */
+.ap-subnav-wrap {
+    border-bottom: 1px solid #D1D1D1;
+    height: 33px;
+    line-height: 17px;
+    padding: 0 0 7px;
+}
+
+.ap-subnav-buttons {
+    color: #666;
+    float: left;
+    font-family: SerifaRoman;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ap-subnav-buttons a {
+    color: #666;
+    display: block;
+    float: left;
+    padding: 8px 28px 8px 33px;
+    text-decoration: none;
+}
+
+.ap-subnav-buttons a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+.ap-subnav-buttons a:hover {
+    color: #09f;
+    text-decoration: underline;
+}
+
+.ap-subnav-upload {
+    background: url("../images/icon-post-resource.gif") no-repeat 2px 5px
+}
+
+.ap-subnav-discuss {
+    background: url("../images/icon-discuss-forums.gif") no-repeat 2px 5px
+}
+
+.ap-subnav-share {
+    background: url("../images/icon-share-this.gif") no-repeat 2px 5px
+}
+
+.ap-subnav-search {
+    float: right;
+    padding: 1px 0 2px;
+}
+
+.ap-subnav-search input.focus {
+    border: 1px solid #ccc;
+    background: #F7F8F7;
+}
+
+/* ===[ deprecated styles ]===*/
+.ap-float-left{
+    float: left;
+}
+
+.ap-float-right{
+    float: right;
+}
+
+/* ==================================================
+   ================================================== */
+/* --- NAV ---
+   ==================================================
+   ================================================== */
+/* CB GLobal Nav
+   ================================================== */
+.cb-global-nav {
+    display: block;
+    background-color: #ccc;
+    font-size: .86em;
+}
+
+.cb-global-footer {
+    height: 150px;
+    display: block;
+    background-color: #ccc;
+    font-size: .86em;
+}
+
+/* ==================================================
+   ================================================== */
+/* --- FOOTER ---
+   ==================================================
+   ================================================== */
+.ap-sub-footer ul {
+    list-style: none;
+    overflow: none;
+    float: right;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.ap-sub-footer li {
+    width: auto;
+    float: left;
+    margin: 5px 2px;
+    padding-right: 8px;
+    padding-left: 2px;
+    border-right: 1px solid #ccc;
+}
+
+.ap-sub-footer ul li a {
+    color: #09F;
+    text-decoration: none;
+}
+
+.ap-sub-footer ul li a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.ap-sub-footer ul li a:active {
+    color: #09F;
+    text-decoration: underline;
+}
+
+.ap-sub-footer ul li:first-child {
+    margin: 5px 5px 10px 0;
+    padding-right: 8px;
+}
+
+.ap-sub-footer ul li:last-child {
+    margin: 5px 0 0 5px;
+    padding-right: 0;
+    border-right: none;
+}
+
+.cb-copy {
+    margin: 5px 0 0;
+    float: left;
+    color: #666;
+    height: 18px;
+}
+
+.ap-sub-footer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.nth-no-border {
+    border-right: none!important
+}
+
+/* ==================================================
+   ================================================== */
+/* --- BUTTONS, LINKS ---
+   ==================================================
+   ================================================== */
+
+/* ===[ Standard APTC Theme Button - button style most used ]=== 
+	* including overrides to some OOTB liferay button styles 
+   ==================================================*/
+/* ===[ Default ]=== */
+.aptc-theme-button, 
+a.aptc-theme-button, 
+.portlet-body a.aptc-theme-button,
+button.aptc-theme-button,
+input[type='button'].aptc-theme-button,
+input[type='reset'].aptc-theme-button,
+input[type='submit'].aptc-theme-button,
+.portlet-message-boards input[type='button'],
+.portlet-message-boards input[type='reset'],
+.portlet-message-boards input[type='submit'], 
+.portlet-message-boards .lfr-search-container .taglib-search-iterator .results-row .lfr-actions, 
+.splash-community-select-box button.jqTransformButton, 
+.social-networking-portlet-wall input[type='submit'] {
+	background: -ms-linear-gradient(top, #0099ff 0%, #0089e1 100%); /* IE10 */
+	background: -moz-linear-gradient(top, #0099ff 0%, #0089e1 100%); /* Mozilla Firefox */ 
+	background: -o-linear-gradient(top, #0099ff 0%, #0089e1 100%); /* Opera */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0099ff), color-stop(1, #0089e1)); /* Webkit (Safari/Chrome 10) */
+	background: -webkit-linear-gradient(top, #0099ff 0%, #0089e1 100%); /* Webkit (Chrome 11+) */
+	background: linear-gradient(top, #0099ff 0%, #0089e1 100%); /* Proposed W3C Markup */
+	border: 1px solid #cdcdcd; /* yes border style */
+	/* border: none; /* no border style */
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	border-radius: 16px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+    font-family: "Arial", "Helvetica", "Verdana", sans-serif;
+	font-size: 14px;
+    font-weight: normal;
+	padding: 2px 20px 3px; /* yes border style */
+    /* padding: 3px 20px 4px; /* no border style */
+	text-decoration: none;
+	text-shadow: none;
+}
+
+/* ===[ Default - IE ]=== */
+.ie .aptc-theme-button, 
+.ie a.aptc-theme-button, 
+.ie .portlet-body a.aptc-theme-button,
+.ie button.aptc-theme-button,
+.ie input[type='button'].aptc-theme-button,
+.ie input[type='reset'].aptc-theme-button,
+.ie input[type='submit'].aptc-theme-button, 
+.ie .portlet-message-boards input[type='button'],
+.ie .portlet-message-boards input[type='reset'],
+.ie .portlet-message-boards input[type='submit'], 
+.ie .portlet-message-boards .lfr-search-container .taglib-search-iterator .results-row .lfr-actions, 
+.ie .splash-community-select-box button.jqTransformButton, 
+.ie .social-networking-portlet-wall input[type='submit'] {
+	behavior: url('/aptc-theme/htc/PIE.htc');
+	-pie-background: linear-gradient(#0099ff, #0089e1);
+	position: relative;
+}
+
+/* ===[ Hover ]=== */
+.aptc-theme-button:hover, 
+a.aptc-theme-button:hover, 
+.portlet-body a.aptc-theme-button:hover,
+button.aptc-theme-button:hover,
+input[type='button'].aptc-theme-button:hover,
+input[type='reset'].aptc-theme-button:hover,
+input[type='submit'].aptc-theme-button:hover,
+.portlet-message-boards input[type='button']:hover,
+.portlet-message-boards input[type='reset']:hover,
+.portlet-message-boards input[type='submit']:hover, 
+.portlet-message-boards .lfr-search-container .taglib-search-iterator .results-row .lfr-actions:hover, 
+.splash-community-select-box button.jqTransformButton:hover, 
+.social-networking-portlet-wall input[type='submit']:hover {
+	background: -ms-linear-gradient(bottom, #0099ff 0%, #0089e1 100%); /* IE10 */
+	background: -moz-linear-gradient(bottom, #0099ff 0%, #0089e1 100%); /* Mozilla Firefox */ 
+	background: -o-linear-gradient(bottom, #0099ff 0%, #0089e1 100%); /* Opera */
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #0099ff), color-stop(1, #0089e1)); /* Webkit (Safari/Chrome 10) */
+	background: -webkit-linear-gradient(bottom, #0099ff 0%, #0089e1 100%); /* Webkit (Chrome 11+) */
+	background: linear-gradient(bottom, #0099ff 0%, #0089e1 100%); /* Proposed W3C Markup */
+	border: 1px solid #cdcdcd; /* yes border style */
+	/*border: none; /* no border style */
+	color: #fff;
+	text-decoration: none;
+}
+
+/* ===[ Hover - IE ]=== */
+.ie .aptc-theme-button:hover, 
+.ie a.aptc-theme-button:hover, 
+.ie .portlet-body a.aptc-theme-button:hover,
+.ie button.aptc-theme-button:hover,
+.ie input[type='button'].aptc-theme-button:hover,
+.ie input[type='reset'].aptc-theme-button:hover,
+.ie input[type='submit'].aptc-theme-button:hover,
+.ie .portlet-message-boards input[type='button']:hover,
+.ie .portlet-message-boards input[type='reset']:hover,
+.ie .portlet-message-boards input[type='submit']:hover, 
+.ie .portlet-message-boards .lfr-search-container  .taglib-search-iterator .results-row .lfr-actions:hover, 
+.ie .splash-community-select-box button.jqTransformButton:hover, 
+.ie .social-networking-portlet-wall input[type='submit']:hover {
+	behavior: url('/aptc-theme/htc/PIE.htc');
+	-pie-background: linear-gradient(#0089e1, #0099ff);
+	position: relative;
+}
+
+/* ===[ some liferay markup overrides ]=== */
+.portlet-message-boards .lfr-search-container .taglib-search-iterator .results-row .lfr-actions .lfr-trigger strong {
+	padding: 0;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+.portlet-message-boards .lfr-search-container .taglib-search-iterator .results-row .lfr-actions .lfr-trigger strong a {
+	color: #fff;
+	font-weight: normal;
+	padding: 0;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+/* ===[ APTC Keyword Button - used in keywords UI ]===*/
+/* ===[ Default ]=== */
+.aptc-keyword-button,
+a.aptc-keyword-button, 
+.portlet-body a.aptc-keyword-button,
+button.aptc-keyword-button,
+input[type='button'].aptc-keyword-button,
+input[type='reset'].aptc-keyword-button,
+input[type='submit'].aptc-keyword-button {
+	background-color: #419135;
+	border: 1px solid #cdcdcd; /* yes border style */
+	/* border: none; /* no border style */
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	border-radius: 16px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+    font-family: "Arial", "Helvetica", "Verdana", sans-serif;
+	font-size: 14px;
+    font-weight: normal;
+    padding: 2px 20px 3px; /* yes border style */
+    /* padding: 3px 20px 4px; /* no border style */
+	text-decoration: none;
+	text-shadow: none;
+}
+
+/* ===[ Default - IE ]=== */
+.ie .aptc-keyword-button,
+.ie a.aptc-keyword-button, 
+.ie .portlet-body a.aptc-keyword-button,
+.ie button.aptc-keyword-button,
+.ie input[type='button'].aptc-keyword-button,
+.ie input[type='reset'].aptc-keyword-button,
+.ie input[type='submit'].aptc-keyword-button {
+	behavior: url('/aptc-theme/htc/PIE.htc');
+	-pie-background: linear-gradient(#419135, #419135);
+	position: relative;
+}
+
+/* ===[ Hover ]=== */
+.aptc-keyword-button:hover,
+a.aptc-keyword-button:hover, 
+.portlet-body a.aptc-keyword-button:hover,
+button.aptc-keyword-button:hover,
+input[type='button'].aptc-keyword-button:hover,
+input[type='reset'].aptc-keyword-button:hover,
+input[type='submit'].aptc-keyword-button:hover {
+	background-color: #419135;
+	border: 1px solid #cdcdcd; /* yes border style */
+	/* border: none; /* no border style */
+	color: #fff;
+	text-decoration: none;
+}
+
+/* ===[ Hover - IE ]=== */
+.ie .aptc-keyword-button:hover,
+.ie a.aptc-keyword-button:hover, 
+.ie .portlet-body a.aptc-keyword-button:hover,
+.ie button.aptc-keyword-button:hover,
+.ie input[type='button'].aptc-keyword-button:hover,
+.ie input[type='reset'].aptc-keyword-button:hover,
+.ie input[type='submit'].aptc-keyword-button:hover {
+	behavior: url('/aptc-theme/htc/PIE.htc');
+	-pie-background: linear-gradient(#419135, #419135);
+	position: relative;
+}
+
+/* ===[ Links/Buttons with Icons ]=== 
+   ==================================================*/
+.arrow-link-1 {
+    background: url('../images/list-arrow-right.png') no-repeat right center;
+    padding: 0 9px 0 0;
+}
+
+.button-arrow-back-mod1, 
+a.button-arrow-back-mod1 {
+	padding-left: 10px; /* used only padding-left here so it could inherit whatever vertical padding from the button theme class */
+}
+.button-arrow-back-mod1 .image-wrapper {
+    background: url('../images/morearrow-white-left.png') no-repeat left center;
+    padding: 0 0 1px 18px;
+}
+
+.button-arrow-forward-mod1, 
+a.button-arrow-forward-mod1 {
+	padding-right: 10px; /* used only padding-right here so it could inherit whatever vertical padding from the button theme class */
+}
+.button-arrow-forward-mod1 .image-wrapper {
+    background: url('../images/morearrow-white-right.png') no-repeat right center;
+    padding: 0 18px 1px 0;
+}
+
+.button-cancel-mod1, 
+a.button-cancel-mod1 {
+	padding-right: 16px; /* used only padding-right here so it could inherit whatever vertical padding from the button theme class */
+}
+.button-cancel-mod1 .image-wrapper {
+    background: url('../images/x-white-transparent.png') no-repeat right center;
+    padding: 0 18px 1px 0;
+}
+
+.button-cancel-mod2, 
+a.button-cancel-mod2 {
+	padding-right: 10px; /* used only padding-right here so it could inherit whatever vertical padding from the button theme class */
+}
+.button-cancel-mod2 .image-wrapper {
+    background: url('../images/tag-delete.png') no-repeat right center;
+    padding: 0 22px 1px 0;
+}
+
+.toggle-link {
+	background: url('../images/arrows/content-item-closed.png') no-repeat right center;
+	color: #09f;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0 0 20px;
+	padding: 0 16px 0 0;
+}
+
+.toggle-link-active {
+	background-image: url('../images/arrows/content-item-open.png');
+}
+
+.toggle-link-content {
+	display: none;
+}
+
+
+/* ==================================================
+   ================================================== */
+/* --- HEADINGS ---
+   ==================================================
+   ================================================== */
+h1, .h1 {
+	color: #036;
+	font: 34px/34px 'SerifaRoman';
+	font-weight: 400;
+	margin: 0;
+}
+
+h2, .h2{
+	color: #036;
+	font: 24px/24px 'SerifaRoman';
+	font-weight: 400;
+	margin: 0;
+}
+
+.lfr-add-content h2 {/* this shows up when you use liferay dockbar > add > more... */
+	color: #000;
+	font-family: 'Arial';
+	line-height: 1.4em;
+}
+/* we may need to add other liferay OOTB mitigation styles (like the above) here... */
+
+h3, .h3, 
+.topic-question {
+	color: #036;
+	font: 18px/18px 'SerifaRoman';
+	font-weight: 400;
+	margin: 0;
+}
+
+h4, .h4{
+  color: #036;
+	font: 26px/26px 'Arial';
+	font-weight: 400;
+	margin: 0;
+}
+h5, .h5{
+  color: #000;
+	font: 19px/19px 'Arial';
+	font-weight: 400;
+	margin: 0;
+}
+.ap-welcome-banner h2 {
+	font-size: 30px;
+}
+
+.ap-heading-small {
+	font-size: 18px;
+}
+
+/* ==================================================
+   ================================================== */
+/* --- MODULES ---
+   ==================================================
+   ================================================== */
+.basic-info-module, 
+.basic-info-module-not-first {
+	border-top: solid 1px #cdcdcd;
+	color: #333;
+	font: 13px/17px 'Arial';
+	margin: 30px 0;
+	padding: 30px 0 0;
+}
+
+.basic-info-module:first-child {
+	border-top: none;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.basic-info-module header, 
+.basic-info-module-not-first header { /* same as h2 */
+	margin: 0 0 20px 0;	
+}
+
+.basic-info-module p, 
+.basic-info-module-not-first p {
+	margin: 0 0 20px 0;	
+}
+
+/* ===[ Navigation Modules ]=== 
+   ==================================================*/
+/* ===[ Nav3 - style used on "Help" page ]=== 
+ * requirements: 
+ 	* single tier of steps (no parent/children - see nav6 for parent/children)
+ 	* steps are wrapped in border (top/bottom) with dotted line and whitespace
+ 	* selected step shows arrow on right side and background color
+   ==================================================*/
+.ul-nav3,
+.topics-category-nav {
+	color: #09f;
+	font-size: 14px;
+	margin: 0;
+	padding: 0 0 20px;
+}
+	.ul-nav3 a,
+	.topics-category-nav a {
+		color: #09f;
+		font-size: 14px;
+		text-decoration: none;
+	}
+		.ul-nav3 a:hover, 
+		.topics-category-nav a:hover {
+			text-decoration: underline;
+		}
+	.ul-nav3 li,
+	.topics-category-nav li {
+		background: url('../images/newarrow-blue-right-small.png') no-repeat 4px center;
+		border-top: 1px dotted #cdcdcd;
+		list-style-type: none;
+		padding: 9px 25px;
+	}
+		.ul-nav3 li:first-child, 
+		.topics-category-nav li:first-child {
+			border-top: none;
+		}
+		.ul-nav3 li.selected,
+		.topics-category-nav li.selected {
+			background: url('../images/newarrow-blue-right-small.png') no-repeat right center #f8f8f8;
+		}
+/* ===[ Nav6 - style used on "My Preferences" page ]=== 
+ * requirements: 
+ 	* steps are wrapped in border (top/bottom) with dotted line and whitespace
+ 	* parent steps have arrow image on left
+ 	* parent step (open/unselectable) shows muted with down arrow image on left
+ 	* child steps tier by left indent
+ 	* unselected child step shows no arrow image on left
+ 	* selected step (parent or child) shows arrow on right side and background color
+   ==================================================*/
+.ul-nav6 {
+	color: #09f;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+
+.ul-nav6 a {
+	color: #09f;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.ul-nav6 a:hover {
+	text-decoration: underline;
+}
+
+.ul-nav6 li {
+	border-top: 1px dotted #cdcdcd;
+	list-style-type: none;
+	padding: 9px 25px;
+}
+
+.ul-nav6 li:first-child {
+	border-top: none;
+}
+
+.ul-nav6 li.parent {
+	background: url('../images/newarrow-blue-right-small.png') no-repeat 4px center;
+}
+
+.ul-nav6 li.parent-open {
+	background: url('../images/arrow-small-darkgrey-down.png') no-repeat 8px center;
+	color: #666;
+}
+
+.ul-nav6 li.child {
+	padding-left: 40px; /* added only padding left here to provide a "step" look but not interfere with inherited li padding settings */
+}
+
+.ul-nav6 li.selected {
+	background: url('../images/newarrow-blue-right-small.png') no-repeat right center #f8f8f8;
+}
+
+/* ==================================================
+   ================================================== */
+/* --- ANNOUNCEMENTS ---
+   ==================================================
+   ================================================== */
+.portlet-msg-hidden {
+	display: none;
+}
+
+/* below rule added to help with a IE8 bug on button painting. (see http://tools.collegeboardnewmedia.org/jira/browse/APTC-843) 
+ * Theory is that PIE is such a resource hog that having the button 
+ * unhide a div above it causes the button background to linger above 
+ * the actual button.  Adjusting the height works ever so slightly faster.
+ */
+.ie .portlet-msg-hidden {
+	height: 0;
+}
+
+.ap-community-home-announce {
+    padding: 20px 25px;
+    margin: 25px 0;
+    background: #fffbe0;
+    border: 1px solid #d7d2d6;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.ap-community-home-announce h2 {
+    margin: 0 0 10px;
+    color: #d98100;
+    font-size: 20px;
+}
+
+.ap-community-home-announce p {
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.journal-content-article {
+    border-bottom: none!important
+}
+
+/* ==================================================
+   ================================================== */
+/* --- COMMENTS ---
+   ==================================================
+   ================================================== */
+/* use local page implementation css files to 
+ * customize on individual pages (like /curriculum
+ * and /resource-details)
+ */
+.comments-area .comments-post-box {
+}
+
+.comments-area .comments-post-box h3 {
+    margin: 0 0 8px;	
+}
+
+.comments-area .comments-error-text {
+	color: red;
+	font-weight: bold;
+    margin: 0 0 8px;	
+}
+
+.comments-area .comments-post-box .comments-textarea {
+	display: block;
+    height: 58px;
+    padding: 10px 2px 2px 10px;
+    width: 420px;
+}
+
+.comments-area .comment-box .comments-edit-textarea {
+	display: block;
+    padding: 10px 2px 10px 10px;
+	width: 100%;
+}
+
+.comments-area .comment-box a.comment-edit {
+	margin: 10px 20px 5px 0;
+	background-image: url("../images/edit-pencil.png");
+    background-repeat: no-repeat;
+	padding-left: 20px;
+}
+
+.comments-area .comment-box a.comment-delete {
+	margin: 10px 10px 5px 0;
+	background-image: url("../images/x-red.png");
+    background-repeat: no-repeat;
+	padding-left: 22px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.comments-area .comment-box a.comment-view {
+	margin: 10px 10px 5px 0;
+	background-image: url("../images/icon-resource-library-url.png");
+    background-repeat: no-repeat;
+	padding-left: 22px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.comments-area .comment-box .comment-change-save, .comment-change-cancel {
+	margin: 10px 10px 5px 0;
+}
+
+.comments-area .comment-box .comment-blank-error {
+	margin: 10px 0 0 5px;
+	font-family: "Arial";
+    font-size: 13px;
+	color: #C90000;
+	background-color: #fef2f2;
+	float: right;
+}
+
+.comment-delete-confirm-modal {
+	padding: 20px;
+}
+
+.comment-delete-confirm-modal .comment-delete-confirm, .comment-delete-cancel {
+	margin: 5px 10px 0 0;
+}
+
+.comments-area .comments-post-box a.comments-submit {
+	margin: 10px 0 0;
+}
+
+.comments-area .comments-display-box {
+	margin: 20px 0 0;
+}
+
+.comments-area .comments-display-box .comment-box {}
+
+.comments-area .comments-display-box .comment-box dl {
+    border-top: 1px dotted #c1c1c1;
+    clear: both;
+    margin: 0;
+    overflow: hidden;
+    padding: 20px 0 16px;
+}
+
+.comments-area .comments-display-box .comment-box dt {
+    float: left;
+    text-align: center;
+    width: 60px;
+}
+
+.comments-area .comments-display-box .comment-box dt .user-image {
+	background-color: #ccc;
+	display: block;
+	height: 60px;
+    width: 60px;
+}
+
+.comments-area .comments-display-box .comment-box dt .user-name, 
+.portlet-body .comments-area .comments-display-box .comment-box dt a.user-name {
+	display: block;
+    line-height: 1em;
+    margin-top: 6px;
+}
+
+.comments-area .comments-display-box .comment-box dd {
+    margin: 0 16px 0 76px;
+    padding: 0;
+}
+
+.comments-area .comments-display-box .comment-box .comment-display {
+    color: #000;
+    font-size: 13px;
+}
+
+.comments-area .comments-display-box .comment-box .comment-post-info {
+    margin: 12px 0 0;
+}
+
+.comments-area .comments-display-box .comments-more-toggle {
+    background-color: #f7f7f7;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#eeeeee)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #f7f7f7, #eeeeee); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient(top, #f7f7f7, #eeeeee); /* FF3.6 */
+    background-image: -ms-linear-gradient(top, #f7f7f7, #eeeeee); /* IE10 */
+    background-image: -o-linear-gradient(top, #f7f7f7, #eeeeee); /* Opera 11.10+ */
+    background-image: linear-gradient(top, #f7f7f7, #eeeeee);
+    border: 1px solid #cdcdcd;
+    cursor: pointer;
+    display: block;
+    line-height: 24px;
+    padding: 8px;
+    text-align: center;
+}
+.ie .comments-area .comments-display-box .comments-more-toggle {
+    position: relative;
+    behavior: url('/aptc-theme/htc/PIE.htc');
+    -pie-background: linear-gradient(#f7f7f7, #eeeeee);
+}
+
+/* ==================================================
+   ================================================== */
+/* --- RELATED RESOURCES ---
+   ==================================================
+   ================================================== */
+/* use local page implementation css files to 
+ * customize on individual pages (like resource-details)
+ */
+.related-resources  {
+	font-size: 13px;	
+}
+
+.related-resources .upload-function, 
+.related-resources .portlet-body a.upload-function, {
+    background: url("../images/upload-a-resource.png") no-repeat;
+    border-bottom: dotted 1px #cdcdcd;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 42px;
+    margin: 0 0 16px;
+}
+
+.related-resources .content-items-group {
+}
+
+.related-resources .content-item {
+    border-bottom: dotted 1px #cdcdcd;
+    padding: 6px 0 10px;
+}
+
+.related-resources .content-item.first-child {
+	padding-top: 0;
+}
+
+.related-resources .content-item.last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.related-resources .content-item-cf-list ul {
+	margin: 0;
+}
+
+.related-resources .content-item .item-name,
+.related-resources .content-item-cf-list .item-name {
+	display: block;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.related-resources .content-item .item-name .edge,
+.related-resources .content-item-cf-list .item-name .edge {
+    background: url('../images/cf-trans.png') repeat-y;
+    display: block;
+    height: 17px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+}
+
+.related-resources .content-item .item-name.shortenough .edge,
+.related-resources .content-item-cf-list .item-name.shortenough .edge {
+    display: none;
+}
+
+.related-resources .content-item .aui-rating {
+    margin-top: 8px
+}
+
+.related-resources .view-all-function, 
+.related-resources .portlet-body a.view-all-function {
+    background: url('../images/list-arrow-right.png') no-repeat 108px center;
+    border-top: dotted 1px #cdcdcd;
+    display: block;
+    padding-right: 8px;
+    margin: 16px 0 0;
+}
+
+/* ==================================================
+   ================================================== */
+/* --- RELATED ITEMS (replaces related-resources) ---
+   ==================================================
+   ================================================== */
+.related-items-portlet-style  {
+	font-size: 13px;	
+}
+
+.related-items-top-section {
+    border-bottom: dotted 1px #cdcdcd;
+    margin: 0 0 8px;
+    padding: 0 0 16px;
+}
+
+.related-items-top-section a {
+    background: url('../images/upload-a-resource.png') no-repeat;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 0 0 0 42px;
+}
+
+.related-items-middle-section {}
+
+.related-items-empty-message {
+	color: #999;
+	font-style: italic;
+	margin: 14px 0 0 0;
+}
+
+.related-item, 
+.topics-related-links ul li {
+    border-top: dotted 1px #cdcdcd;
+    line-height: 22px;
+    padding: 8px 0 10px;
+}
+
+.related-item:first-child, 
+.related-item-first, 
+.topics-related-links ul li:first-child {
+	border-top: none;
+	padding-top: 0;
+}
+
+.related-item:last-child, 
+.related-item-last, 
+.topics-related-links ul li:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.item-with-fadeoff {
+	display: block;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;	
+}
+
+.item-icon {
+	padding: 4px 0 0 25px;
+}
+
+.item-fadeoff {
+    background: url('../images/cf-trans.png') repeat-y;
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;	
+}
+
+.related-items-bottom-section {
+    border-top: dotted 1px #cdcdcd;
+    margin: 10px 0 0;
+    padding: 8px 0 0;
+    text-align: right;
+}
+
+.related-items .aui-rating {
+    margin-top: 8px
+}
+
+/* customizations for curriculum-alignment instance */
+.cf-nodes .related-item, 
+.cf-nodes .related-item-first, 
+.cf-nodes .related-item-last {
+    border: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+.cf-nodes .related-items-bottom-section {
+    text-align: left;
+}
+
+/* ==================================================
+   ================================================== */
+/* --- MISC ---
+   ==================================================
+   ================================================== */
+/* ===[ Utility ]=== */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.cblayout {
+    margin: 0 auto;
+    width: 960px;
+    z-index: 200;
+}
+
+.screen-reader-only,
+.screenReaderOnly{
+    height: 1px;
+    left: -9999px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+abbr, acronym {
+	border:none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.shortmlcontent{
+	display:inline;
+}
+.mlcontent{
+	display:inline;
+}
+
+
+/* ==================================================
+   ================================================== */
+/* --- POSITION, WIDTH, PADDING AND MARGIN STYLES ---
+   ==================================================
+   ================================================== */
+/*** position styles ***/
+.posbox {
+	position:relative;
+}
+
+.posbottom {
+	bottom:0px;
+	position:absolute;
+}
+
+.posleft {
+	left:0px;
+	position:absolute;
+}
+
+.posright {
+	position:absolute;
+	right:0px;
+}
+
+.postop {
+	position:absolute;
+	top:0px;
+}
+
+/*** /position styles ***/
+
+/*** width styles ***/
+.width-fifth {
+	width:20%;
+}
+
+.width-quarter {
+	width:25%;
+}
+
+.width-third {
+	width:33%;
+}
+
+.width-twofifth {
+	width:40%;
+}
+
+.width-half {
+	width:50%;
+}
+
+.width-threefifth
+{
+	width:60%;
+}
+.width-twothird
+{
+	width:67%;
+}
+.width-threequarter
+{
+	width:75%;
+}
+.width-fourfifth
+{
+	width:80%;
+}
+.width-full
+{
+	width:100%;
+}
+.width25
+{
+	width:25px;
+}
+.width50
+{
+	width:50px;
+}
+.width100
+{
+	width:100px;
+}
+.width150
+{
+	width:150px;
+}
+.width173
+{
+	width:173px;
+}
+.width200
+{
+	width:200px;
+}
+.width250
+{
+	width:250px;
+}
+.width300
+{
+	width:300px;
+}
+.width400
+{
+	width:400px;
+}
+.width500
+{
+	width:500px;
+}
+.width750
+{
+	width:750px;
+}
+/*** /width styles ***/
+
+/*** margin styles ***/
+
+.ap-separator-string{
+	margin-left:-3px;
+}
+
+
+.center
+{
+	margin-left:auto;
+	margin-right:auto;
+}
+.margin0
+{
+	margin:0px;
+}
+.margin2
+{
+	margin:2px;
+}
+.margin5
+{
+	margin:5px;
+}
+.margin10
+{
+	margin:10px;
+}
+.margin15
+{
+	margin:15px;
+}
+.margin20
+{
+	margin:20px;
+}
+.margin25
+{
+	margin:25px;
+}
+.margin35
+{
+	margin:35px;
+}
+.margin50
+{
+	margin:50px;
+}
+.margin100
+{
+	margin:100px;
+}
+.margin150
+{
+	margin:150px;
+}
+.margin200
+{
+	margin:200px;
+}
+.margin250
+{
+	margin:250px;
+}
+.margin300
+{
+	margin:300px;
+}
+.margin-2
+{
+	margin:-2px;
+}
+.margin-5
+{
+	margin:-5px;
+}
+.margin-10
+{
+	margin:-10px;
+}
+.margin-15
+{
+	margin:-15px;
+}
+.margin-20
+{
+	margin:-20px;
+}
+.margin-25
+{
+	margin:-25px;
+}
+.margin-35
+{
+	margin:-35px;
+}
+.margin-50
+{
+	margin:-50px;
+}
+.margin-100
+{
+	margin:-100px;
+}
+.margin-150
+{
+	margin:-150px;
+}
+.margin-200
+{
+	margin:-200px;
+}
+.margin-250
+{
+	margin:-250px;
+}
+.margin-300
+{
+	margin:-300px;
+}
+.margin-bottom0
+{
+	margin-bottom:0px;
+}
+.margin-left0
+{
+	margin-left:0px;
+}
+.margin-right0
+{
+	margin-right:0px;
+}
+.margin-top0
+{
+	margin-top:0px;
+}
+.margin-bottom-only
+{
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+}
+.margin-left-only
+{
+	margin-bottom:0px;
+	margin-right:0px;
+	margin-top:0px;
+}
+.margin-right-only
+{
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-top:0px;
+}
+.margin-top-only
+{
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+}
+.margin-horiz-only
+{
+	margin-bottom:0px;
+	margin-top:0px;
+}
+.margin-vert-only
+{
+	margin-left:0px;
+	margin-right:0px;
+}
+/*** /margin styles ***/
+
+/*** padding styles ***/
+.padding0
+{
+	padding:0px;
+}
+.padding2
+{
+	padding:2px;
+}
+.padding5
+{
+	padding:5px;
+}
+.padding10
+{
+	padding:10px;
+}
+.padding15
+{
+	padding:15px;
+}
+.padding20
+{
+	padding:20px;
+}
+.padding25
+{
+	padding:25px;
+}
+.padding30
+{
+	padding:30px;
+}
+.padding35
+{
+	padding:35px;
+}
+.padding50
+{
+	padding:50px;
+}
+.padding100
+{
+	padding:100px;
+}
+.padding150
+{
+	padding:150px;
+}
+.padding200
+{
+	padding:200px;
+}
+.padding250
+{
+	padding:250px;
+}
+.padding300
+{
+	padding:300px;
+}
+.padding-bottom0
+{
+	padding-bottom:0px;
+}
+.padding-left0
+{
+	padding-left:0px;
+}
+.padding-right0
+{
+	padding-right:0px;
+}
+.padding-top0
+{
+	padding-top:0px;
+}
+.padding-bottom-only
+{
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+}
+.padding-left-only
+{
+	padding-bottom:0px;
+	padding-right:0px;
+	padding-top:0px;
+}
+.padding-right-only
+{
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-top:0px;
+}
+.padding-top-only
+{
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+}
+.padding-horiz-only
+{
+	padding-bottom:0px;
+	padding-top:0px;
+}
+.padding-vert-only
+{
+	padding-left:0px;
+	padding-right:0px;
+}
+/*** /padding styles ***/
+
+/*** text styles ***/
+.word-break
+{
+	overflow:hidden;
+	width:100%;
+	word-wrap:break-word;
+}
+/*** /text styles ***/
+
+/*** /position styles ***/
+.reset-position{
+	position: static;
+}
+
+/*** form styles ***/
+.field-error
+{
+	color:#f00;
+	display:block;
+	font-weight:bold;
+	padding-bottom:10px;
+}
+/*** /form styles ***/
+
+/*=== [RTE content (e.g., message board threads etc)] ===*/
+/* so users can add their own bullets and other light formatting */
+body.rte-container {/* used on CKEditor contents iframe */
+	height: auto;
+}
+
+.rte-container p{
+	color: #333;
+	font: 400 13px/17px 'Arial';
+}
+.rte-container i, 
+.rte-container em{
+	font-style: italic;
+}
+.rte-container b, 
+.rte-container strong{
+	font-weight: 700;
+}
+
+.rte-container ol, 
+.rte-container ul{
+	margin: 0 0 1em 2em;
+}
+	.rte-container ol li {
+		list-style-type: decimal;
+	}
+    .rte-container ol[type='a'] > li{
+        list-style-type: lower-alpha;
+    }
+	.rte-container ul li {
+		list-style-type: disc;
+	}
+
+.rte-container blockquote{
+	color: #999;
+	font-style: italic;
+}
+
+/*** my preferences portlet overrides ***/
+#my-preferences-portlet .settings-row-label
+{
+	width:300px;
+}
+/*** /my preferences portlet overrides ***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mainnav
+{
+	background-image:-ms-linear-gradient(top, #5bbf50 0%, #3e8933 100%); /* IE10 */
+	background-image:-moz-linear-gradient(top, #5bbf50 0%, #3e8933 100%); /* Mozilla Firefox */
+	background-image:-o-linear-gradient(top, #5bbf50 0%, #3e8933 100%); /* Opera */
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #5bbf50), color-stop(1, #3e8933)); /* Webkit (Safari/Chrome 10) */
+	background-image:-webkit-linear-gradient(top, #5bbf50 0%, #3e8933 100%); /* Webkit (Chrome 11+) */
+	background-image:linear-gradient(top, #5bbf50 0%, #3e8933 100%); /* Proposed W3C Markup */ 
+	-webkit-border-radius:16px;
+	-moz-border-radius:16px;
+	border-radius:16px;
+	height:33px;
+	margin:1px 0px 8px;
+}
+.ie .mainnav /* use background image for gradient in shitty browsers */
+{
+	background:url("../images/sprites/mainnav-bg.png") repeat-x 0px -66px;
+	border-radius:0px;
+}
+.ie7 .mainnav > .before,
+.ie .mainnav:before /* use "before" pseudo-element (or fake it!) with background image to simulate a left-hand bg in shitty browsers */
+{
+	background:#fff url("../images/sprites/mainnav-bg.png") no-repeat 0px 0px;
+	left:0px;
+	width:15px;
+	z-index:0;
+}
+.ie7 .mainnav > .after,
+.ie .mainnav:after /* use "after" pseudo-element (or fake it!) with background image to simulate a right-hand bg in shitty browsers */
+{
+	background:#fff url("../images/sprites/mainnav-bg.png") no-repeat 0px -33px;
+	right:0px;
+	width:15px;
+	z-index:0;
+}
+.mainnav ul
+{
+	height:100%;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+.mainnavItems
+{
+	width:100%;
+}
+.mainnavItem
+{
+	position:relative; /* in case we have a child menu */
+	text-align:center;
+	vertical-align:middle;
+}
+.ie7 .mainnavItem
+{
+	padding-top:2px;
+}
+.mainnavItem:first-child
+{
+	padding-left:2px;
+	text-align:left;
+}
+.mainnavItem:last-child
+{
+	padding-right:2px;
+	text-align:right;
+}
+.ie .mainnavItem.last-child
+{
+	padding-right:2px;
+	text-align:right;
+}
+.mainnavLink
+{
+	color:#fff;
+	display:inline-block;
+	font:16px "Arial";
+	height:29px;
+	line-height:29px;
+	margin:0px;
+	padding:0px 25px;
+	text-align:center;
+	text-decoration:none;
+}
+.ie7 .mainnavLink
+{
+	display:inline;
+	zoom:1;
+}
+.mainnavLink:hover,
+.mainnavItem.active .mainnavLink,
+.mainnavItem.selected .mainnavLink
+{
+	background-image:-ms-linear-gradient(top, #fefefe 0%, #ddd 100%); /* IE10 */
+	background-image:-moz-linear-gradient(top, #fefefe 0%, #ddd 100%); /* Mozilla Firefox */
+	background-image:-o-linear-gradient(top, #fefefe 0%, #ddd 100%); /* Opera */
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(1, #ddd)); /* Webkit (Safari/Chrome 10) */
+	background-image:-webkit-linear-gradient(top, #fefefe 0%, #ddd 100%); /* Webkit (Chrome 11+) */
+	background-image:linear-gradient(top, #fefefe 0%, #ddd 100%); /* Proposed W3C Markup */
+	color:#212121;
+	-webkit-border-radius:14px;
+	-moz-border-radius:14px;
+	border-radius:14px;
+	text-decoration:none;
+}
+.mainnavItem.selected .mainnavLink
+{
+	-webkit-border-bottom-left-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.ie .mainnavLink:hover,
+.ie .mainnavItem.active .mainnavLink,
+.ie .mainnavItem.selected .mainnavLink /* use background image for gradient in shitty browsers */
+{
+	background:url("../images/sprites/mainnav-item-bg.png") repeat-x 0px -58px;
+	border-radius:0px;
+	margin:0px 15px;
+	padding:0px 10px;
+	position:relative;
+}
+.ie7 .mainnavLink:hover > .before,
+.ie .mainnavLink:hover:before,
+.ie7 .mainnavItem.active .mainnavLink > .before,
+.ie .mainnavItem.active .mainnavLink:before /* use "before" pseudo-element (or fake it!) with background image to simulate a left-hand bg in shitty browsers */
+{
+	background:url("../images/sprites/mainnav-item-bg.png") no-repeat 0px 0px;
+	left:-15px;
+	width:15px;
+	z-index:1;
+}
+.ie .mainnavItem.selected .mainnavLink > .before,
+.ie .mainnavItem.selected .mainnavLink:before
+{
+	background:url("../images/sprites/mainnav-item-bg.png") repeat-x 0px -87px;
+}
+.ie7 .mainnavItem.selected .mainnavLink > .before,
+.ie9 .mainnavItem.selected .mainnavLink:before
+{
+	left:-15px;
+	width:15px;
+	z-index:1;
+}
+.ie8 .mainnavItem.selected .mainnavLink:before
+{
+	content:" ";		/* this is needed specifically for ie8... the browser doesn't want to redraw the pseudo-elements unless the content actually changes!!! */
+}
+.ie7 .mainnavLink:hover > .after,
+.ie .mainnavLink:hover:after,
+.ie7 .mainnavItem.active .mainnavLink > .after,
+.ie .mainnavItem.active .mainnavLink:after /* use "after" pseudo-element (or fake it!) with background image to simulate a right-hand bg in shitty browsers */
+{
+	background:url("../images/sprites/mainnav-item-bg.png") no-repeat 0px -29px;
+	right:-15px;
+	width:15px;
+	z-index:1;
+}
+.ie .mainnavItem.selected .mainnavLink > .after,
+.ie .mainnavItem.selected .mainnavLink:after
+{
+	background:url("../images/sprites/mainnav-item-bg.png") repeat-x 0px -116px;
+}
+.ie7 .mainnavItem.selected .mainnavLink > .after,
+.ie9 .mainnavItem.selected .mainnavLink:after
+{
+	right:-15px;
+	width:15px;
+	z-index:1;
+}
+.ie8 .mainnavItem.selected .mainnavLink:after
+{
+	content:" ";		/* this is needed specifically for ie8... the browser doesn't want to redraw the pseudo-elements unless the content actually changes!!! */
+}
+.mainnavLinkText
+{
+	white-space:nowrap;
+}
+
+
+
+.mainnavChild
+{
+	background-image:-ms-linear-gradient(top, #fefefe 0%, #ddd 100%); /* IE10 */
+	background-image:-moz-linear-gradient(top, #fefefe 0%, #ddd 100%); /* Mozilla Firefox */
+	background-image:-o-linear-gradient(top, #fefefe 0%, #ddd 100%); /* Opera */
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(1, #ddd)); /* Webkit (Safari/Chrome 10) */
+	background-image:-webkit-linear-gradient(top, #fefefe 0%, #ddd 100%); /* Webkit (Chrome 11+) */
+	background-image:linear-gradient(top, #fefefe 0%, #ddd 100%); /* Proposed W3C Markup */
+	background-color:#f7f7f7;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	border-radius:12px;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	display:none;
+	position:absolute;
+	text-align:left;
+	z-index:99;
+}
+.ie .mainnavChild
+{
+	-pie-background: linear-gradient(#fefefe, #ddd); /*PIE*/
+	behavior:url('/aptc-theme/htc/PIE.htc');
+	border-radius:0px 12px 12px 12px;
+	left:-15px; /* compensate for :before node width */
+	margin-top:-1px;
+}
+.ie7 .mainnavChild
+{
+	top:31px;
+	zoom:1;
+}
+.mainnavChildItems
+{
+}
+.mainnavChildItem
+{
+	border-top:1px dotted #cdcdcd;
+	margin:2px 8px;
+	padding:0px;
+}
+.mainnavChildItem:first-child
+{
+	border-top:none;
+}
+.mainnavChildLink
+{
+	color:#333;
+	display:block;
+	font:14px "Arial";
+	margin:0px;
+	padding:8px;
+	text-decoration:none;
+}
+.mainnavChildLink:hover
+{
+	background-color:#ddd;
+	color:#09f;
+	text-decoration:underline;
+}
+.mainnavChildLinkText
+{
+	white-space:nowrap;
+}
